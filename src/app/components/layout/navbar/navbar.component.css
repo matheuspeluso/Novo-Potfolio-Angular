@@ -1,0 +1,19 @@
+#theme-toggle{
+    cursor: pointer;
+}
+
+#menu-toggle{
+    cursor: pointer;
+
+    &:hover{
+        color: red;
+    }
+}
+
+#title-name{
+    cursor: pointer;
+
+    &:hover{
+        color: red;
+    }
+}

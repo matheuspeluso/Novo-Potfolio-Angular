@@ -1,0 +1,50 @@
+<!-- Seção Projetos -->
+<section id="projetos" class="bg-gray-50 py-12 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 dark:text-white">Meus Projetos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Loop pelos projetos -->
+        <div *ngFor="let projeto of projetos; let i = index" class="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-700">
+          <div class="relative">
+            <!-- Galeria de Imagens -->
+            <div class="gallery-container">
+              <img [src]="projeto.imagens[projeto.imagemAtual]" alt="Imagem do {{ projeto.nome }}"
+                class="w-full h-64 object-cover transition-all duration-300">
+            </div>
+            <!-- Botões de Navegação -->
+            <button (click)="irParaImagemAnterior(i)"
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <button (click)="irParaImagemProxima(i)"
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 dark:text-white">{{ projeto.nome }}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{{ projeto.descricao }}</p>
+            <div class="mt-4 flex justify-between">
+              <a [href]="projeto.deployLink" target="_blank"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Deploy
+              </a>
+              <a [href]="projeto.githubLink" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition duration-300">
+                Repositório
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
