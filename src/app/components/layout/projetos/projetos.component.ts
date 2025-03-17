@@ -21,7 +21,8 @@ export class ProjetosComponent {
 
       deployLink: 'LINK_DO_DEPLOY_1',
       githubLink: 'LINK_DO_GITHUB_1',
-      imagemAtual: 0 // Índice da imagem atual
+      imagemAtual: 0, // Índice da imagem atual
+      hasDeploy: false
     },
 
     {
@@ -35,7 +36,8 @@ export class ProjetosComponent {
 
       deployLink: 'LINK_DO_DEPLOY_2',
       githubLink: 'LINK_DO_GITHUB_2',
-      imagemAtual: 0 // Índice da imagem atual
+      imagemAtual: 0, // Índice da imagem atual
+      hasDeploy: true
     },
 
     {
