@@ -8,10 +8,8 @@
         class="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-700">
         <div class="relative">
           <!-- Galeria de Imagens -->
-          <div class="gallery-container">
-            <img [src]="projeto.imagens[projeto.imagemAtual]" alt="Imagem do {{ projeto.nome }}"
-              class="w-full h-64 object-cover transition-all duration-300">
-          </div>
+          <img [src]="projeto.imagens[projeto.imagemAtual]" alt="Imagem do {{ projeto.nome }}"
+            class="w-full h-64 object-cover transition-all duration-300">
           <!-- Botões de Navegação -->
           <button (click)="irParaImagemAnterior(i)"
             class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none">
@@ -32,7 +30,15 @@
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-2 dark:text-white">{{ projeto.nome }}</h3>
-          <p class="text-gray-600 dark:text-gray-300">{{ projeto.descricao }}</p>
+          <!-- Descrição truncada ou expandida -->
+          <p [class.line-clamp-none]="projeto.expandido" class="text-gray-600 dark:text-gray-300 line-clamp-3">
+            {{ projeto.descricao | truncate: projeto.expandido ? undefined : 100 }}
+          </p>
+          <!-- Botão "Ler mais" -->
+          <button *ngIf="projeto.descricao.length > 100" (click)="toggleExpand(projeto)"
+            class="text-blue-600 hover:underline mt-2 block">
+            {{ projeto.expandido ? 'Ler menos' : 'Ler mais' }}
+          </button>
           <div class="mt-4 flex justify-between">
             <a *ngIf="projeto.hasDeploy" [href]="projeto.deployLink" target="_blank"
               class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
