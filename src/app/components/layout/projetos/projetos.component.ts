@@ -30,7 +30,7 @@ export class ProjetosComponent {
     },
     {
       nome: 'FrontEnd Angular - WebClientePF',
-      descricao: 'FrontEnd Angular com Bootstrap, integrado com APIClientes, telas de CRUD para cliente e endereço.',
+      descricao: 'O projeto WebClientePF trata-se de um front-end desenvolvido em Angular e Bootstrap 5 para estilização. Este projeto consome a "BackEnd Java Spring Boot - CRUD de Clientes e Endereços" e realiza operações de Crud (Create, Read, Update, Delete) de clientes e endereços.',
       imagens: [
         'https://raw.githubusercontent.com/matheuspeluso/webClientePf/main/prints_projeto/consulta_cliente.png', 
         'https://github.com/matheuspeluso/webClientePf/raw/main/prints_projeto/cadastro_cliente01.png', 

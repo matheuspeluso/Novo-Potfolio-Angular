@@ -28,19 +28,19 @@ export class SkilsComponent {
 
   getSkillColor(skillName: string) {
     switch(skillName) {
-      case 'AngularJS': return 'bg-blue-500';
-      case 'Docker': return 'bg-yellow-500';
-      case 'AWS': return 'bg-red-500';
-      case 'HTML 5': return 'bg-purple-500';
-      case 'JavaScript': return 'bg-orange-500';
-      case 'CSS 3': return 'bg-pink-500';
+      case 'AngularJS': return 'bg-red-500';
+      case 'Docker': return 'bg-blue-500';
+      case 'AWS': return 'bg-yellow-500';
+      case 'HTML 5': return 'bg-orange-500';
+      case 'JavaScript': return 'bg-yellow-500';
+      case 'CSS 3': return 'bg-blue-500';
       case 'Bootstrap 5': return 'bg-cyan-500';
-      case 'API RESTful': return 'bg-violet-500';
-      case 'Java': return 'bg-rose-500';
+      case 'API RESTful': return 'bg-red-500';
+      case 'Java': return 'bg-orange-500';
       case 'Spring Boot': return 'bg-sky-500';
-      case 'RabbitMQ': return 'bg-sky-500';
-      case 'MongoDB': return 'bg-sky-500';
-      case 'MySQL': return 'bg-sky-500';
+      case 'RabbitMQ': return 'bg-yellow-500';
+      case 'MongoDB': return 'bg-orange-500';
+      case 'MySQL': return 'bg-red-500';
       case 'PostgreSQL': return 'bg-sky-500';
       default: return 'bg-gray-500';
     }

@@ -27,6 +27,6 @@ export class SobreComponent {
     Estou sempre aberto a novas oportunidades e pronto para contribuir com projetos inovadores!
   `;
 
-  imagemPerfil = 'https://cdn.discordapp.com/attachments/748550619454898369/1351261964826841238/ft_perfil.jpg?ex=67d9bc45&is=67d86ac5&hm=6985a46fc666cdaff299d62ce8e4e65516bee114937da173551d316803351b94&';
+  imagemPerfil = '/ft_perfil.jpg';
 
 }
